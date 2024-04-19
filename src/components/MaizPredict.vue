@@ -1,12 +1,12 @@
 <template>
     <v-container class="border-white">
       <v-row align="center" class="row-c1">
-        <v-col sm="5.9" class="col1-color">
+        <v-col class="col1-color align-self-stretch">
           <h1 class="mb-8">
             Módulo de Predicción
           </h1>
           <v-container class="['border-white', `elevation-${20}`]">
-            <v-row align="center" justify="left" class="row-c1">
+            <v-row align="center" justify="center" class="row-c1">
               <v-col sm="6">
                 <form id="prediction-form" @submit.prevent="submit">
                   <h3 class="mb-4">
@@ -100,13 +100,13 @@
                 </v-text>
               </v-col>
               <br>
-              <v-btn form="prediction-form" class="me-4 bordered-button" type="submit">
+              <v-btn form="prediction-form" class="bordered-button" type="submit">
                 Calcular Predicción
               </v-btn>
             </v-row>
           </v-container>
         </v-col>
-        <v-col lg="6" class="col2-color">
+        <v-col lg="6" class="col2-color align-self-stretch">
           <h1 class="mb-8 textc2">
             Análisis del modelo
           </h1>
@@ -247,9 +247,16 @@
   
 <style scoped>
 
-  .border-white {
-    width: 100%; /* Tamaño fijo que ocupa todo el ancho */
-    height: auto; /* Tamaño fijo que ocupa todo el ancho */
+  /*.border-white {
+    width: 100%; 
+    height: auto; 
+  }*/
+
+  .row-c1 {
+    height: auto;
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
   }
 
   .col1-color {
@@ -257,12 +264,16 @@
     color: black;
     height: auto;
     border-radius: 8px;
-    padding: auto;
+    /*padding: auto;*/
     margin: 1%;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
   }
 
   .col2-color {
@@ -270,17 +281,12 @@
     color: black;
     height: auto;
     border-radius: 8px;
-    padding: auto;
+    /*padding: auto;*/
     margin: 1%;
-    display: flex;
-    flex-direction: column;
+    /*display: flex;*/
+    /*flex-direction: column;*/
     justify-content: center;
     text-align: center;
-  }
-  .row-c1 {
-    height: auto; /* Tamaño fijo que ocupa todo el ancho */
-    display: flex;
-    align-content: flex-start;
   }
   .css-text {
     color: rgb(0, 0, 0);
@@ -302,9 +308,11 @@
   .bordered-button {
     margin-top: 3%; /* Ajusta el margen superior según sea necesario */
     margin-bottom: 2%; /* Ajusta el margen inferior según sea necesario */
-    margin-left: 12%;
+    margin-left: 1%;
+    margin-right: 1%;
     border-radius: 10px;
     background-color:#33691E;
+    align-self: center;
   }
   .label {
     background-color: #33691E; /* Cambia 'yellow' al color que desees */
