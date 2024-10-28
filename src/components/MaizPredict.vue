@@ -5,7 +5,7 @@
           <h1 class="mb-8">
             Módulo de Predicción
           </h1>
-          <v-container class="['border-white', `elevation-${20}`]">
+          <v-container class="[`elevation-${20}`]">
             <v-row align="center" justify="center" class="row-c1">
               <v-col sm="6">
                 <form id="prediction-form" @submit.prevent="submit">
@@ -247,10 +247,11 @@
   
 <style scoped>
 
-  /*.border-white {
-    width: 100%; 
-    height: auto; 
-  }*/
+  .border-white { 
+    border-radius: 8px;
+    /*background-color: #755a1c;*/
+    margin-bottom: 5%;
+  }
 
   .row-c1 {
     height: auto;

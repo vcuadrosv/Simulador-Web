@@ -57,6 +57,9 @@
 </script>
 
 <style>
+.v-application {
+  overflow: auto !important;
+}
 .footer {
   position: fixed;
   bottom: 0;
@@ -74,7 +77,6 @@
 
 .fixed-main {
   height: calc(100vh - 150px); /* 150px es la suma del alto del app bar y el footer */
-  overflow-y: auto; /* Para habilitar el desplazamiento vertical si el contenido excede el tamaño */
 }
 
 </style>
