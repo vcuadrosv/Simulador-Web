@@ -44,5 +44,20 @@ export default defineConfig({
   server: {
     port: 3000,
     host: '0.0.0.0',
+    proxy: {
+      '/paraview-web': {
+        target: 'http://localhost:1234',  // Dirección de tu servidor de ParaView Web
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/paraview-web/, ''),
+        configure: (proxy) => {
+          // Aquí puedes modificar las cabeceras antes de que lleguen a tu frontend
+          proxy.on('proxyRes', (proxyRes) => {
+            proxyRes.headers['X-Frame-Options'] = 'ALLOWALL';  // Permitir incrustar en un iframe
+            proxyRes.headers['Content-Security-Policy'] = "frame-ancestors 'self' http://localhost:3000";  // Permitir solo desde tu frontend
+          });
+        },
+      },
+    },
   },
 })

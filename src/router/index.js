@@ -8,21 +8,20 @@ const routes = [
         component: Home,
     },
     {
-        path: '/maizpredict',
-        name: 'maizPredict',
-        component: () => import('../components/MaizPredict.vue'),
-    },
-    {
         path: '/hello',
         name: 'hello',
         component: () => import('../components/HelloWorld.vue'),
     },
     {
-        path: '/estadisticas',
-        name: 'estadisticas',
-        component: () => import('../components/Estadisticas.vue'),
+        path: '/simulador1',
+        name: 'simulador1',
+        component: () => import('../components/Simulador1.vue'),
+    },
+    {
+        path: '/instrucciones',
+        name: 'instrucciones',
+        component: () => import('../components/Instrucciones.vue'),
     }
-
 ]
 
 const router = createRouter({

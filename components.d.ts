@@ -7,12 +7,10 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    BarChart: typeof import('./src/components/BarChart.vue')['default']
-    CanvasJSChart: typeof import('./src/components/CanvasJSChart.vue')['default']
-    Estadisticas: typeof import('./src/components/Estadisticas.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
-    MaizPredict: typeof import('./src/components/MaizPredict.vue')['default']
+    Instrucciones: typeof import('./src/components/Instrucciones.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Simulador1: typeof import('./src/components/Simulador1.vue')['default']
   }
 }
