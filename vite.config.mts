@@ -44,6 +44,9 @@ export default defineConfig({
   server: {
     port: 3000,
     host: '0.0.0.0',
+    cors: {
+      origin: '*',  // Permite solicitudes desde cualquier origen
+    },
     proxy: {
       '/paraview-web': {
         target: 'http://localhost:1234',  // Dirección de tu servidor de ParaView Web
