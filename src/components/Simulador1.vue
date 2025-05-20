@@ -14,7 +14,7 @@
             <v-row align="center" justify="center" class="row-c1">
               <v-col sm="6">
                 <form id="prediction-form" @submit.prevent="submit">
-                  <h3 class="mb-4">Velocidad</h3>
+                  <h3 class="mb-4">Presión (Pa)</h3>
                   <v-select
                     v-model="p.value.value"
                     :items="[0, 1, 2, 3]"
@@ -25,7 +25,7 @@
                     color="white"
                   />
 
-                  <h3 class="mb-4">Presión</h3>
+                  <h3 class="mb-4">Velocidad(m/s)</h3>
                   <v-select
                     v-model="v.value.value"
                     :items="filteredVelocities"
@@ -91,7 +91,7 @@ const submit = async () => {
   console.log('Solicitud enviada con:', { pressure, velocity })
 
   try {
-    await fetch('http://localhost:5001/start', {
+    await fetch('http://ec2-18-222-109-125.us-east-2.compute.amazonaws.com/start', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
