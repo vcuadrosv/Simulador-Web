@@ -50,7 +50,7 @@ export default defineConfig({
     allowedHosts: true,
     proxy: {
       '/paraview-web': {
-        target: 'http://localhost:1234',  // Dirección de tu servidor de ParaView Web
+        target: 'http://ec2-18-222-109-125.us-east-2.compute.amazonaws.com:1234',  // Dirección de tu servidor de ParaView Web
         changeOrigin: true,
         secure: false,
         rewrite: (path) => path.replace(/^\/paraview-web/, ''),
