@@ -91,7 +91,7 @@ const submit = async () => {
   console.log('Solicitud enviada con:', { pressure, velocity })
 
   try {
-    await fetch('http://ec2-18-222-109-125.us-east-2.compute.amazonaws.com/start', {
+    await fetch('http://ec2-18-222-109-125.us-east-2.compute.amazonaws.com:5001/start', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
