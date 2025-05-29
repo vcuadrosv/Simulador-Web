@@ -54,7 +54,7 @@
           <h1 class="mb-8 textc2">Entorno de simulación</h1>
           <!-- iframe con recarga dinámica -->
           <iframe
-            src="http://ec2-3-135-206-7.us-east-2.compute.amazonaws.com:1234/"
+            src="http://ec2-52-15-163-172.us-east-2.compute.amazonaws.com:1234/"
             width="100%"
             height="85%"
             style="border: none"
@@ -91,7 +91,7 @@ const submit = async () => {
   console.log('Solicitud enviada con:', { pressure, velocity })
 
   try {
-    await fetch('http://ec2-3-135-206-7.us-east-2.compute.amazonaws.com:5001/start', {
+    await fetch('http://ec2-52-15-163-172.us-east-2.compute.amazonaws.com:5001/start', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

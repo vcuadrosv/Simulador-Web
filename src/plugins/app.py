@@ -56,6 +56,6 @@ try:
     server_process = subprocess.Popen(server_command)
     time.sleep(3)  # Dar tiempo a que el servidor inicie
     print(f"\n✅ Servidor ParaView Web iniciado en el puerto {PORT}")
-    print(f"🌐 Accede en: http://localhost:{PORT}/")
+    print(f"🌐 Accede en: http://ec2-52-15-163-172.us-east-2.compute.amazonaws.com:{PORT}/")
 except Exception as e:
     print(f"❌ Error al iniciar ParaView Web: {e}")

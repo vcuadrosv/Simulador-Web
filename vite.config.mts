@@ -50,7 +50,7 @@ export default defineConfig({
     allowedHosts: true,
     proxy: {
       '/paraview-web': {
-        target: 'http://ec2-3-135-206-7.us-east-2.compute.amazonaws.com:1234',  // Dirección de tu servidor de ParaView Web
+        target: 'http://ec2-52-15-163-172.us-east-2.compute.amazonaws.com:1234',  // Dirección de tu servidor de ParaView Web
         changeOrigin: true,
         secure: false,
         rewrite: (path) => path.replace(/^\/paraview-web/, ''),
@@ -58,7 +58,7 @@ export default defineConfig({
           // Aquí puedes modificar las cabeceras antes de que lleguen a tu frontend
           proxy.on('proxyRes', (proxyRes) => {
             proxyRes.headers['X-Frame-Options'] = 'ALLOWALL';  // Permitir incrustar en un iframe
-            proxyRes.headers['Content-Security-Policy'] = "frame-ancestors 'self' http://localhost:3000";  // Permitir solo desde tu frontend
+            proxyRes.headers['Content-Security-Policy'] = "frame-ancestors 'self' http://ec2-52-15-163-172.us-east-2.compute.amazonaws.com:3000";  // Permitir solo desde tu frontend
           });
         },
       },
